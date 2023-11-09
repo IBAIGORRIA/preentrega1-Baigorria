@@ -3,8 +3,8 @@ import {AiOutlineShoppingCart} from "react-icons/ai";
 function CartWidget() {
   return (
     <div>
-        <AiOutlineShoppingCart/>
-        0
+        <div class="navbar-item"><AiOutlineShoppingCart/></div>
+        <div class= "numerito">0</div>
     </div>
   )
 }

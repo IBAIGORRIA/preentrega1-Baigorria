@@ -1,8 +1,10 @@
 
-  @import url('https://fonts.googleapis.com/css2?family=Fuggles&family=Merriweather:ital,wght@1,300&display=swap');
-
+/*Bulma*/
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
+/*Fuentes*/
+@import url('https://fonts.googleapis.com/css2?family=Fuggles&family=Merriweather:ital,wght@1,300&display=swap');
+/*Colores*/
 :root{
-    
     --clr-whiter:  #f9ebf2 ;
     --clr-white:  #f3e2e8 ;
     --clr-main:  #fcd7da ;
@@ -12,22 +14,8 @@
     --clr-alter: #3c363b ;
     --clr-alter-whiter: #8a898aa6 ;
     --clr-red:#d83838 ;
-
 }
-
-root {
-    
-    margin:0;
-    padding:0;
-    box-sizing: border-box;
-    font-family: 'Merriweather', serif;
-
-}
-
-App{
-    background-image: "./imgs/BCKG.jpg";
-}
-
+/*Ajustes*/
 h1, h2, h3, h4, h5, h6, p ,a, input, textarea{
     margin:0;
     padding:0;
@@ -41,16 +29,18 @@ a{
     text-decoration: none;
 }
 
+*{
+    
+}
 
-.intro {
-    width: 100vh;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: none;
-    /* transform: scale(1);
-    transition: opacity 1.5s ease, transform 1.5s ease, width 1.5s ease, height 1.5s ease; */
+/*Estilos*/
+
+root {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    
+    background-image: "./imgs/BCKG.jpg";
 }
 
 #logo {
@@ -61,32 +51,19 @@ a{
     transition: opacity 1.5s ease, transform 1.5s ease, width 1.5s ease, height 1.5s ease;
 }
 
-
-
-
-/**INDEX**/
-
-/* .wrapper{
-    display: flex;
-    flex-direction: column;
-    
-    align-items: center;
-    justify-content:space-between;
-} */
-
 .navbar{
-    
     background-color: var(--clr-main-dark);
     color: var(--clr-white);
-    padding: 1rem 4rem 1rem 2rem;
+    /* padding: 1rem 4rem 1rem 2rem; */
     position: sticky;
-    align-items: center;
+    font-family: 'Merriweather', serif; 
+    /* align-items: center;
     display: flex;
     flex-direction: row;
     justify-content:space-between;
     top:0;
     z-index: 2; 
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); 
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);  */
 }
 .logo{
     font-family:'Fuggles', cursive;
@@ -95,19 +72,14 @@ a{
     color: var(--clr-alter);
     position: right;
 }
-.navbar .menu{
+.menu{
     display: flex;
-  flex-direction: row;
-  gap: 1rem;
-  justify-content: center;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
 }
-.boton-menu-li  {
-    margin: 0;
-    padding: 1rem;
-    flex-grow: 1;
-    width: 100%;
-}
-.navbar .boton-menu{
+
+.boton-menu{
     border: 0;
     background-color: transparent;
     color: var(--clr-alter);
@@ -120,19 +92,8 @@ a{
     width: 100%;
     transition: color 0.3s; 
 }
-.boton-menu-li.active{
-    background-color: var(--clr-whiter);
-    color: var(--clr-main-darker);
-    position: relative;
-}
 
-.texto-footer{
-    color: var(--clr-alter-whiter);
-    font-size: 0.85rem;
-    position: fixed right bottom;
-    display: flex;
-    justify-content: right;
-}
+
 
 .main{
     background-color: var(--clr-main);
@@ -141,161 +102,12 @@ a{
     display: flex;
     flex-direction: column;
 }
-.titulo-categoria{
-    color: var(--clr-main-even-darker);
-    margin-bottom: 2rem;
-    display : flex;
-    justify-content: center;
-}
-.contenedor-productos{
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 1rem;
-}
-.producto-imagen{
-    border-radius: 1rem;
-    max-width: 100%;
-}
-.producto-detalles{
-    background-color: var(--clr-main);
-    padding: .5rem;
-    margin-top: -2rem;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    gap: 0.25rem;
-}
-.producto-nombre{
-    font-size: 1rem;
-}
-.producto-agregar{
-    border: 0;
-    background-color: var(--clr-main-darker);
-    padding: .4rem;
-    text-transform: uppercase;
-    border-radius: 2rem;
-    cursor: pointer;
-    border: 2px solid var(--clr-main-darker);
-    transition: background-color .2s, color .2s;
-}
-.producto-agregar:hover{
-    background-color: var(--clr-main);
-    text-decoration-line: underline;
-    font-weight: bold;
-}
 
 .numerito{
     background-color: var(--clr-main-darker);
     padding: 0.15rem .25rem;
     border-radius: .25rem;
-
+    text-align: center;
 }
 
 /**CARRITO**/
-
-.contenedor-carrito{
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
-.carrito-vacio,
-.carrito-comprado{
-    color: var(--clr-main-darker);
-}
-
-.carrito-productos{
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-.carrito-producto{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    background-color: var(--clr-white);
-    align-items: center;
-    padding: .5rem;
-    padding-right: 1.5rem;
-}
-.carrito-producto-imagen{
-    width: 4rem;
-    height: 4rem;
-}
-.carrito-producto-nombre{
-    width: 6rem;
-}
-
-.carrito-producto-small{
-    font-size: 0.65rem;
-}
-
-.carrito-producto-eliminar{
-    border: 0;
-    background-color: transparent;
-    color: var(--clr-red);
-    cursor: pointer;
-}
-
-.carrito-acciones{
-    display: flex;
-    justify-content: space-between;
-}
-
-.carrito-acciones-vaciar{
-    border-color: var(--clr-main-dark);
-    border-radius: 1rem;
-    padding: 1rem;
-    text-transform: uppercase;
-    background-color: var(--clr-main);
-    transition: background-color .2s, color .2s;
-    cursor: pointer;
-}
-.carrito-acciones-vaciar:hover{
-    background-color: var(--clr-main-darker);
-    text-decoration-line: underline;
-    font-weight: bold;
-}
-.carrito-acciones-comprar{
-    border-color: var(--clr-main-dark);
-    border-top-right-radius: 1rem;
-    border-bottom-right-radius: 1rem;
-    padding: 1rem;
-    text-transform: uppercase;
-    background-color: var(--clr-main-darker);
-    transition: background-color .2s, color .2s;
-    cursor: pointer;
-}
-.carrito-acciones-comprar:hover{
-    background-color: var(--clr-main);
-    text-decoration-line: underline;
-    font-weight: bold;
-}
-
-.carrito-acciones-derecha{
-    display: flex;
-    flex-direction: row;
-}
-.carrito-acciones-total{
-    display: flex;
-    border-color: var(--clr-main-dark);
-    border-top-left-radius: 1rem;
-    border-bottom-left-radius: 1rem;
-    padding: 1rem;
-    text-transform: uppercase;
-    background-color: var(--clr-main);
-    gap: 1rem;
-}
-.disabled{
-    display: none;
-}
-
-
-.my-sweetalert {
-    background-color:#fcd7da; 
-    color: #3c363b; 
- }
-
-.my-sweetalert-confirm-button::part(confirm-button){
-    background-color:#76f1ae; 
-    color: #3c363b; 
- }
