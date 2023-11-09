@@ -7,7 +7,7 @@ const NavBar = ()=> {
         <nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
     <a class="navbar-item" href="#">
-      <h1 className="logo"> <a href="#">Maite Joyas </a> </h1>
+       <a href="#"><h1 className="logo">Maite Joyas </h1></a> 
     </a>
 
     <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
