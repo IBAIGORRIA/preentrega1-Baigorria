@@ -1,49 +1,42 @@
 import CartWidget from "../CartWidget/CartWidget"
-
+import './NavBar.css'
 
 const NavBar = ()=> {
 
     return ( 
-        <nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a class="navbar-item" href="#">
-       <a href="#"><h1 className="logo">Maite Joyas </h1></a> 
-    </a>
+        <nav className="navbar" role="navigation" aria-label="main navigation">
+          <div className="navbar-brand">
+          <div className="navbar-item" >
+          <h1 className="logo">Maite Joyas </h1> 
+          </div>
+          </div>
 
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
+          <div className="navbar-menu">
+            <div className="navbar-end">
+              <div className=" boton-menu">
+                Todos los Productos
+              </div>
 
-  <div id="navbarBasicExample" class="navbar-menu">
-    <div class="navbar-start">
-      <a class="navbar-item">
-        Todos los Productos
-      </a>
+              <div className=" boton-menu">
+                Collares y Pulseras
+              </div>
 
-      <a class="navbar-item">
-        Collares
-      </a>
+              <div className=" boton-menu">
+                Relojes
+              </div>
 
-      <a class="navbar-item">
-        Pulseras
-      </a>
+              <div className=" boton-menu">
+                Contacto
+              </div>
+            </div>
 
-      <a class="navbar-item">
-        Promos
-      </a>
-      
-    </div>
-
-    <div class="navbar-end">
-      <div class="navbar-item">
-        <a class="navbar-item" className="boton-menu boton-carrito " href="#"><CartWidget/> </a>
-      </div>
-    </div>
-  </div>
-</nav>
+            <div >
+              <div className="">
+                <div className=" boton-menu boton-carrito " ><CartWidget/> </div>
+              </div>
+            </div>
+          </div>
+      </nav>
     )
 
 }

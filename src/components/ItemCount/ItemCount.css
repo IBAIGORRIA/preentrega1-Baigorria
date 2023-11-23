@@ -1,0 +1,34 @@
+:root{
+    
+    --clr-whiter:  #f9ebf2 ;
+    --clr-white:  #f3e2e8 ;
+    --clr-main:  #fcd7da ;
+    --clr-main-dark: #f58f9a ;
+    --clr-main-darker: #f5707d ;
+    --clr-main-even-darker: #e43d4e ;
+    --clr-alter: #3c363b ;
+    --clr-alter-whiter: #8a898aa6 ;
+    --clr-red:#d83838 ;
+}
+.producto-agregar{
+    border: 0;
+    background-color: var(--clr-main-darker);
+    padding: .4rem;
+    text-transform: uppercase;
+    border-radius: 2rem;
+    cursor: pointer;
+    border: 2px solid var(--clr-main-darker);
+    transition: background-color .2s, color .2s;
+}
+
+.producto-agregar:hover{
+    background-color: var(--clr-main);
+    text-decoration-line: underline;
+    font-weight: bold;
+}
+.controles{
+    display: flex;
+}
+.box{
+    display: flex !important;
+}

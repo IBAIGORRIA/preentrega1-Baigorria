@@ -92,8 +92,8 @@ root {
     width: 100%;
     transition: color 0.3s; 
 }
-
-
+.itemlist{
+font-family: 'Merriweather', serif;}
 
 .main{
     background-color: var(--clr-main);
