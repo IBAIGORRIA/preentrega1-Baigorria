@@ -22,7 +22,7 @@ const Item =({id, nombre, imagen, precio, stock}) => {
                 <p className="">
                     Stock Disponible: {stock}.
                 </p>
-                <ItemCount />
+                <ItemCount initial={0} stock={ stock } onAdd={(quantity) => console.log("Agregado al carrito!")}/>
             </section>
             <footer className="card -footer">
                 <button className="Details" id={id}> Ver detalles</button>

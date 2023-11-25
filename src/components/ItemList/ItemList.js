@@ -4,7 +4,7 @@ import background from '../../imgs/BCKG.jpg'
 
 function ItemList({products}) {
     return (
-    <div style={{backgroundImage: `url(${background})`, backgroundRepeat: 'no-repeat', width:'100%'}}>
+    <div style={{backgroundImage: `url(${background})`,  width:'100%'}}>
         <section className="hero">
             <div className="hero-body">
                 <p className="title">

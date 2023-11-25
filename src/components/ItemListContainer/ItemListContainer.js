@@ -5,12 +5,12 @@ import './ItemListContainer.css'
 
 const ItemListContainer =() => {
   
-  const [products, setProductos] =  useState([]);
+  const [products, setProducts] =  useState([]);
 
   useEffect(() => {
     dataAsk()
       .then((res)=>{
-        setProductos(res);
+        setProducts(res);
       })
       .catch(err => {
         console.error(err);
