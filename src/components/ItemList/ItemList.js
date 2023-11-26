@@ -1,10 +1,10 @@
 import Item from '../Item/Item';
 import './ItemList.css'
-import background from '../../imgs/BCKG.jpg'
+
 
 function ItemList({products}) {
     return (
-    <div style={{backgroundImage: `url(${background})`,  width:'100%'}}>
+    <div >
         <section className="hero">
             <div className="hero-body">
                 <p className="title">

@@ -1,9 +1,9 @@
-import ItemCount from '../ItemCount/ItemCount'
+import { Link } from 'react-router-dom'
 import './Item.css'
 
 const Item =({id, nombre, imagen, precio, stock}) => {
     return(
-        <div className='column is-one-fifth'>
+        <div className='column is-one-third'>
             <div className="card">
             <header className="card-header">
                 <h2 className="card-header-title is-centered">
@@ -12,7 +12,7 @@ const Item =({id, nombre, imagen, precio, stock}) => {
             </header>
             <div className='card-image'>
                 <figure className='image img-prod'>
-                    <img src={imagen} alt={nombre} className="ItemImg"/>
+                    <img src={imagen} alt='Imagen que no carga, a resolver con BD' className="ItemImg is-centered"/>
                 </figure>
             </div>
             <section className='card-content info'>
@@ -22,10 +22,11 @@ const Item =({id, nombre, imagen, precio, stock}) => {
                 <p className="">
                     Stock Disponible: {stock}.
                 </p>
-                <ItemCount initial={0} stock={ stock } onAdd={(quantity) => console.log("Agregado al carrito!")}/>
             </section>
-            <footer className="card -footer">
-                <button className="Details" id={id}> Ver detalles</button>
+            <footer className="card -footer ">
+                <div className="is-centered details">
+                <div className="Details button is-light" > <Link to={`/item/${id}`}>Ver detalles</Link></div>
+                </div>
             </footer>
         </div>
         </div>

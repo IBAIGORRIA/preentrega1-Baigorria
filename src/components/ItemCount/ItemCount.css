@@ -32,3 +32,12 @@
 .box{
     display: flex !important;
 }
+
+.counter{
+    display: column;
+}
+
+.controles{
+    display: flex;
+    justify-content: space-around;;
+}

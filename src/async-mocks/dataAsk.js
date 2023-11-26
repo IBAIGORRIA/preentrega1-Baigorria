@@ -10,10 +10,10 @@ export const dataAsk = () => {
 })
 }
 
-export const getProductById =(prdId) => {
+export function getProductById (prodId){
 return new Promise((resolve, reject) => {
         setTimeout(() => {
-                resolve (data.find(prod => prod.id === prdId));
+                resolve (data.find(prod => prod.id === prodId));
         },1000)
 })
 

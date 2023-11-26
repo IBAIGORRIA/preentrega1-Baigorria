@@ -1,23 +1,9 @@
-:root{
-    
-    --clr-whiter:  #f9ebf2 ;
-    --clr-white:  #f3e2e8 ;
-    --clr-main:  #fcd7da ;
-    --clr-main-dark: #f58f9a ;
-    --clr-main-darker: #f5707d ;
-    --clr-main-even-darker: #e43d4e ;
-    --clr-alter: #3c363b ;
-    --clr-alter-whiter: #8a898aa6 ;
-    --clr-red:#d83838 ;
-
-}
-
 
 .img-prod{
     border-radius: 1rem;
     max-width: 100%;
 }
-.info{
+section .info{
     background-color: var(--clr-main);
     padding: .5rem;
     margin-top: -2rem;
@@ -25,4 +11,10 @@
     display: flex;
     flex-direction: column;
     gap: 0.25rem;
+}
+
+.details{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

@@ -26,7 +26,7 @@ ul{
 }
 
 a{
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
 
@@ -49,49 +49,8 @@ root {
     transition: opacity 1.5s ease, transform 1.5s ease, width 1.5s ease, height 1.5s ease;
 }
 
-.navbar{
-    background-color: var(--clr-main-dark);
-    color: var(--clr-white);
-    /* padding: 1rem 4rem 1rem 2rem; */
-    position: sticky;
-    font-family: 'Merriweather', serif;
-    font-weight: 300;
-    /* align-items: center;
-    display: flex;
-    flex-direction: row;
-    justify-content:space-between;
-    top:0;
-    z-index: 2; 
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);  */
-}
-.logo{
-    font-family:'Fuggles', cursive;
-    font-weight: 400;
-    font-size: 4rem;
-    color: var(--clr-alter);
-    position: right;
-}
-.menu{
-    
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
-    justify-content: center;
-}
 
-.boton-menu{
-    border: 0;
-    background-color: transparent;
-    color: var(--clr-alter);
-    font-size: 1rem;
-    cursor: pointer;
-    display: flex;
-    gap: 1rem;
-    font-weight: 600;
-    align-items: center center;
-    width: 100%;
-    transition: color 0.3s; 
-}
+
 .itemlist{
 font-family: 'Merriweather', serif;}
 
@@ -110,4 +69,10 @@ font-family: 'Merriweather', serif;}
     text-align: center;
 }
 
-/**CARRITO**/
+.contenedor{
+    display: flex;
+    width: 100vw;
+    min-height: 50vh;
+    align-items: center;
+    justify-content: center;
+}

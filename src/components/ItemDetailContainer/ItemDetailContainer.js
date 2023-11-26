@@ -1,26 +1,28 @@
-import { useEffect } from "react";
-import { useState } from "react"
-import { getProductById } from "../../helpers/dataAsk";
+// import { useEffect } from "react";
+// import { useState } from "react"
+
+// function ItemDetailContainer() {
+//     const {prodId} = useParams();
+//     const[item, setItem] = useState(null);
+//     useEffect(() => {
+//         getProductById(prodId)
+//         .then((res) => {
+//             setItem( res)
+//         })
+//     }, [])
+// import { getProductById } from "../../async-mocks/dataAsk";
+import productWallet from '../../data/data'
 import ItemDetail from "../ItemDetail/ItemDetail";
+import { useParams } from "react-router-dom";
 
-
-function ItemDetailContainer(prodId) {
-
-    const[item, setItem] = useState(null);
-
-    useEffect(() => {
-        getProductById(prodId)
-        .then((res) => {
-            setItem( res)
-        })
-
-    }, [])
-
-
-
+const ItemDetailContainer = () => {
+    const param = useParams();
+    const item = productWallet.find((element) => element.id === param.id)
+    
+    
     return (
-    <div> 
-        {item && <ItemDetail item={item}/>}
+    <div className="container is-centered">
+        {<ItemDetail item= {item}   />}
     </div>
     )
 }
