@@ -24,7 +24,7 @@ const Item =({id, nombre, imagen, precio, stock}) => {
                 </p>
             </section>
             <footer className="card -footer ">
-                <div className="is-centered details">
+                <div className="container is-centered details">
                 <div className="Details button is-light" > <Link to={`/item/${id}`}>Ver detalles</Link></div>
                 </div>
             </footer>

@@ -1,11 +1,37 @@
-import React from 'react'
+import{ useContext, useState } from 'react'
 import ItemCount from '../ItemCount/ItemCount'
 import { Link } from 'react-router-dom'
 import './../../main.css'
+import {CartContext} from '../CartContext/CartContext'
 
 
-const ItemDetail = ({ item }) => {
+ const ItemDetail = ({ item }) => {
     const { nombre, stock, imagen, precio } = item;
+    const [quantityAdded, setQuantityAdded] = useState(0)
+    const [quantity, setQuantity] = useState(1)
+    const { cart} = useContext(CartContext)
+   
+
+    console.log(cart)
+
+    const handleAddToCart = (quantity) => {
+        setQuantityAdded(quantity);
+        
+    }
+
+    const increment = () => {
+        if (quantity <  stock ) {
+            setQuantity(quantity + 1);
+            console.log('sumando')
+        };
+    };
+
+    const decrement = () => {
+        if (quantity > 1) {
+            setQuantity(quantity - 1)
+            console.log('restando')
+        };
+    };
 
     return (
         <div className='contenedor'>
@@ -29,9 +55,14 @@ const ItemDetail = ({ item }) => {
                     </p>
                 </section>
                 <footer className="card-footer ">
+                  { 
+                    quantityAdded>0 ? (
+                        <div className="back button is-light" >  <Link to='/cart' className='Option'>Terminar Compra</Link></div>
+                    ):(
                     <div className='card-footer-item container'>
-                        <ItemCount initial={0} stock={stock} onAdd={(quantity) => {console.log(`Agregando al carrito ${(quantity)} unidades!`)}} />
+                        <ItemCount cantidad={quantity} increment={increment} decrement={decrement} stock={stock} addToCart={handleAddToCart} />
                     </div>
+                    )}
                 </footer>
                 <div className='content'>
                 <div className="back button is-light" > <Link to={'/category/:id'}>Volver</Link></div>

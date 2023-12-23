@@ -2,7 +2,13 @@
 
 function Error() {
   return (
-    <div className="hero">Pagina No encontrada 404</div>
+    <section className="hero">
+            <div className="hero-body">
+                <p className="title">
+                   Pagina No encontrada 404  
+                </p>
+            </div>
+        </section>
   )
 }
 

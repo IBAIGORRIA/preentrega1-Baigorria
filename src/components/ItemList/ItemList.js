@@ -2,13 +2,13 @@ import Item from '../Item/Item';
 import './ItemList.css'
 
 
-function ItemList({products}) {
+function ItemList({products, category}) {
     return (
     <div >
         <section className="hero">
             <div className="hero-body">
                 <p className="title">
-                    Nuestro Catálogo
+                   
                 </p>
             </div>
         </section>

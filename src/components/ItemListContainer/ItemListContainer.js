@@ -1,29 +1,28 @@
-// import { dataAsk } from "../../async-mocks/dataAsk";
-// import { useEffect, useState } from "react";
+import { dataAsk } from "../../async-mocks/dataAsk";
 import ItemList from "../ItemList/ItemList";
 import './ItemListContainer.css'
-import productWallet from "../../data/data";
+import { useEffect, useState } from "react";
+
+import {collection, getDocs} from "firebase/firestore"
+import {db} from "../../firebase/config"
 
 const ItemListContainer =() => {
-  
-  // const [products, setProducts] =  useState([]);
 
-  // useEffect(() => {
-  //   dataAsk()
-  //     .then((res)=>{
-  //       setProducts(res);
-  //     })
-  //     .catch(err => {
-  //       console.error(err);
-  //     })
-  // }, [])
+  const [productos, setProductos] = useState([]);
 
-  
+    useEffect(()=>{
+      dataAsk()
+      //const productosRef = collection(db, "productos");
+      //getDocs(productosRef)
+      .then((res)=>{
+        setProductos(res);
+      })
+    },[])
 
   return (
 
     <div className="item-list ">
-        <ItemList products = {productWallet}/>
+        <ItemList products = {productos}/>
     </div>
   )
 }

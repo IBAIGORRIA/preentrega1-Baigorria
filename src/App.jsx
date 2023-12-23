@@ -4,15 +4,18 @@ import "./main.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Error  from "./pages/Error";
 import Home from "./pages/Home";
-import Contacto from "./pages/Contacto";
+import Contacto from "./components/Contacto/Contacto";
 import Layout from "./pages/Layout";
 import Category from "./pages/Categorias";
+import { Cart } from "./components/Cart/Cart";
+import { CartProvider } from "./components/CartContext/CartContext";
 
 function App(){
 
     return (
         <div>
             <BrowserRouter>
+            <CartProvider>
             <Routes>
                 <Route path="/" element={<Layout/>}>
                     <Route index element={<Home/>}/>
@@ -23,11 +26,14 @@ function App(){
                         <Route path=":subcategory" element={<Category params='promos'/>}/>
                     </Route>
                     <Route path=':category' element={<Category/>}/>
-                    <Route path='contacto' element= {<Contacto/>} />
-                    <Route path="item/:id" element={<ItemDetailContainer />} />
+                    <Route path='/contacto' element= {<Contacto/>} />
+                    <Route path="item/:id" element={<ItemDetailContainer />} /> 
+                    <Route path="/cart" element={<Cart/>} />
+                    <Route path="checkout" />
+                    <Route path='*' element={<Error/>} />
                 </Route>
-                <Route path="*" element={<Error/>} />
-            </Routes>
+               </Routes>
+               </CartProvider>
             </BrowserRouter>
 
         </div>

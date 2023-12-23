@@ -20,7 +20,7 @@ const Category = () => {
   return (
     <div className="item-list ">
       <div className="contenedor">
-      <ItemList products={item} />
+      <ItemList category={category} products={item} />
       </div>
     </div>
   )
