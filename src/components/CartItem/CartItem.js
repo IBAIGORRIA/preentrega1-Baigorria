@@ -1,26 +1,30 @@
 import { CartContext } from "../CartContext/CartContext"
 import { useContext } from "react"
+import "./cartItem.css"
+import { Link } from "react-router-dom"
+
+export const CartItem = ({ imagen, nombre, quantity, precio, id }) => {
+
+    const { removeItem } = useContext(CartContext)
+    const { cart } = useContext(CartContext)
 
 
-export const CartItem = ({products})=>{
+    return (
 
-    const {removeItem} = useContext(CartContext)
-    const {cart} = useContext(CartContext)
+        <div class="container cart-item notification">
 
 
-return (
-    <div>
-        <picture>
-            <img src={products.imagen} alt={products.nombre} />
-        </picture>
-        <div>
-            <h2>{products.nombre} </h2>
-            <p>Cantidad: {products.cantidad} unidades</p>
-            <p>Subtotal: {products.cantidad*products.precio} </p>
-            <button onClick={()=> removeItem(products.id)}>Eliminar</button>
+            <img src={imagen} alt={nombre} className="imagen"/>
+
+
+            <h2>{nombre} </h2>
+
+            <p>Cantidad: {quantity} unidades</p>
+            <p>Subtotal: {quantity * precio} </p>
+            <button className="button" onClick={() => removeItem(id)}>Eliminar</button>
+
+
         </div>
-
-    </div>
-)
+    )
 
 }

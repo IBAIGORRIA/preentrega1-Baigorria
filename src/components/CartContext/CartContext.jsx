@@ -39,13 +39,9 @@ export const CartProvider = ({ children }) =>{
         return cart.some(prod => prod.id === itemId)
     }
     // funcion para el numerito en el carrito
-    const totalQuantity = ()=> {
-        return cart.reduce((acc, itAct)=> acc + itAct.cantidad,0)
-    }
+    const totalQuantity = cart.reduce((acc, itAct)=> acc + itAct.quantity,0)
     //precio total
-    const totalPrice = () =>{
-        return cart.reduce((prev,art) => prev + art.cantidad*art.precio,0)
-    }
+    const totalPrice = cart.reduce((prev,art) => prev + (art.quantity * art.precio),0)
 
     //Ahora comparto las funciones a los hijos por "value"
     return(

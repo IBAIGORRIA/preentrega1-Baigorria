@@ -3,14 +3,14 @@ import './NavBar.css';
 import { NavLink } from "react-router-dom";
 
 const NavBar = () => {
- 
+
 
   return (
     <nav className="navbar" role="navigation" aria-label="main navigation">
       <div className="navbar-brand">
         <div className="navbar-item boton-menu">
           <h1 className="logo">
-            <NavLink to="/" activeClassName="is-active" exact>
+            <NavLink to="/" activeclassname="is-active" exact>
               Maite Joyas
             </NavLink>
           </h1>
@@ -20,28 +20,28 @@ const NavBar = () => {
       <div className="navbar-menu">
         <div className="navbar-end">
           <div className="navbar-item boton-menu">
-            <NavLink to="/products" activeClassName="is-active">
+            <NavLink to="/products" activeclassname="is-active">
               Todos los Productos
             </NavLink>
           </div>
 
           <div className="navbar-item boton-menu has-dropdown is-hoverable">
-            <NavLink to={`/joyeria`} activeClassName="is-active">
+            <NavLink to={`/joyeria`} activeclassname="is-active">
               Joyería
             </NavLink>
             <div className="navbar-dropdown is-boxed">
               <div className="navbar-item boton-menu">
-                <NavLink to={`/joyeria/collares`} activeClassName="is-active">
+                <NavLink to={`/joyeria/collares`} activeclassname="is-active">
                   Collares
                 </NavLink>
               </div>
               <div className="navbar-item boton-menu">
-                <NavLink to={`/joyeria/pulseras`} activeClassName="is-active">
+                <NavLink to={`/joyeria/pulseras`} activeclassname="is-active">
                   Pulseras
                 </NavLink>
               </div>
               <div className="navbar-item boton-menu">
-                <NavLink to={`/joyeria/promos`} activeClassName="is-active">
+                <NavLink to={`/joyeria/promos`} activeclassname="is-active">
                   Promos
                 </NavLink>
               </div>
@@ -49,29 +49,26 @@ const NavBar = () => {
           </div>
 
           <div className="navbar-item">
-            <NavLink to="/relojes" activeClassName="is-active">
+            <NavLink to="/relojes" activeclassname="is-active">
               Relojes
             </NavLink>
           </div>
 
           <div className="navbar-item">
-            <NavLink to="/contacto" activeClassName="is-active">
+            <NavLink to="/contacto" activeclassname="is-active">
               Contacto
             </NavLink>
           </div>
-        </div>
-
-        <div >
-          <div className="">
+          <div className="navbar-item ">
             <NavLink to="/cart">
-            <div className="boton-carrito " ><CartWidget  /> </div>
+              <CartWidget />
             </NavLink>
           </div>
         </div>
       </div>
-    
+
     </nav >
-            )
+  )
 
 }
 export default NavBar

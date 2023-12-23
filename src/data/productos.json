@@ -2,7 +2,7 @@
 {
     "id": "CO-01",
     "nombre": "Collar Dije Azul",
-    "imagen": "./Imgs/Joyeria/CollarDigeNinixAzul.jpeg",
+    "imagen": "https://picsum.photos/200/300",
     "clasificacion":{
         "categoria": "joyeria",
         "nombre": "collares",

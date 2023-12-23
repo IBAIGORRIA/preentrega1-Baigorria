@@ -10,13 +10,13 @@ import {CartContext} from '../CartContext/CartContext'
     const [quantityAdded, setQuantityAdded] = useState(0)
     const [quantity, setQuantity] = useState(1)
     const { cart} = useContext(CartContext)
-   
+    const { addItem } = useContext(CartContext);
 
     console.log(cart)
 
     const handleAddToCart = (quantity) => {
         setQuantityAdded(quantity);
-        
+        addItem(item, quantity)
     }
 
     const increment = () => {
@@ -46,6 +46,7 @@ import {CartContext} from '../CartContext/CartContext'
                         <img src={imagen} alt='Imagen que no carga, a resolver con BD' className="ItemImg is-centered" />
                     </figure>
                 </div>
+                
                 <section className='card-content info'>
                     <p className="">
                         Precio: $ {precio}.
@@ -54,19 +55,22 @@ import {CartContext} from '../CartContext/CartContext'
                         Stock Disponible: {stock}.
                     </p>
                 </section>
+                
                 <footer className="card-footer ">
                   { 
                     quantityAdded>0 ? (
+                        <>
                         <div className="back button is-light" >  <Link to='/cart' className='Option'>Terminar Compra</Link></div>
+                        <div className="back button is-light" > <Link to={'/productos'}>Volver</Link></div>
+                        </>
                     ):(
                     <div className='card-footer-item container'>
                         <ItemCount cantidad={quantity} increment={increment} decrement={decrement} stock={stock} addToCart={handleAddToCart} />
+                        
                     </div>
                     )}
                 </footer>
-                <div className='content'>
-                <div className="back button is-light" > <Link to={'/category/:id'}>Volver</Link></div>
-                </div>
+
             </div>
 
         </div>

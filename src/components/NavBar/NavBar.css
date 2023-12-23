@@ -63,3 +63,6 @@
 a{
     text-decoration: none ;
 }
+.cart{
+    display: flex;
+}
