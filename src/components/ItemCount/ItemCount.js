@@ -1,8 +1,9 @@
 import './ItemCount.css';
+import '../../main.css'
 
 
-const ItemCount = ({ cantidad, increment, decrement, stock, addToCart}) => {
-   
+const ItemCount = ({ cantidad, increment, decrement, stock, addToCart }) => {
+
 
     return (
         <div className="counter">
@@ -12,15 +13,17 @@ const ItemCount = ({ cantidad, increment, decrement, stock, addToCart}) => {
                 <button className="button is-success" onClick={increment}>+</button>
 
             </div>
-            <div className="container">
-                <div className="content is-centered">
-                    <button className="button producto-agregar" onClick={() => addToCart(cantidad)} disabled={!stock}>
+            <div className="columns is-vcentered is-mobile">
+                <div className="column">
+
+                    <button className="button producto-agregar gral-button" onClick={() => addToCart(cantidad)} disabled={!stock}>
                         Agregar Al Carrito
                     </button>
                 </div>
-                
             </div>
+
         </div>
+        
     )
 }
 export default ItemCount

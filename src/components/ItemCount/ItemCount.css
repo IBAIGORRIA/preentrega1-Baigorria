@@ -12,17 +12,16 @@
 }
 .producto-agregar{
     border: 0;
-    background-color: var(--clr-main-darker);
     padding: .4rem;
     text-transform: uppercase;
-    border-radius: 2rem;
+    
     cursor: pointer;
-    border: 2px solid var(--clr-main-darker);
+    
     transition: background-color .2s, color .2s;
 }
 
 .producto-agregar:hover{
-    background-color: var(--clr-main);
+    background-color: var(--clr-main) !important;
     text-decoration-line: underline;
     font-weight: bold;
 }
@@ -40,4 +39,7 @@
 .controles{
     display: flex;
     justify-content: space-around;;
+}
+.columns{
+    margin : 0
 }

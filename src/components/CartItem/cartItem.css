@@ -3,6 +3,7 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    margin-top: 10px;
 }
 .imagen{
     max-width: 10%;

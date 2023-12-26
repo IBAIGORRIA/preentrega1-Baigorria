@@ -4,6 +4,10 @@
 /node_modules
 /.pnp
 .pnp.js
+.env
+/src/firebase/key_service_account.json
+/src/firebase/productos.json
+/src/firebase/uploadJSON.json
 
 # testing
 /coverage

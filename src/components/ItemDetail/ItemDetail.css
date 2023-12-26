@@ -1,0 +1,14 @@
+import :root
+
+.controles{
+    display: flex;
+    justify-content: space-around;;
+}
+
+.bttn-terminar{
+    background-color: var(--clr-main) !important;
+}
+.itemDetails{
+    font-family: 'Merriweather', serif
+
+}

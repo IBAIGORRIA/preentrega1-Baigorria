@@ -5,7 +5,7 @@ const Home = () => {
   return (
     <div className="container contenedor">
        <div className="title"> Bienvenido/a! Tenemos el regalo que buscás!</div>
-       <button className="button"><Link to="/products">Ingresar</Link></button>
+       <button className="button gral-button"><Link to="/products">Ingresar</Link></button>
     </div>
   )
 }

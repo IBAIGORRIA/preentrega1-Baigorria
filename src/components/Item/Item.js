@@ -1,7 +1,10 @@
 import { Link } from 'react-router-dom'
 import './Item.css'
+import '../../main.css'
+
 
 const Item =({id, nombre, imagen, precio, stock}) => {
+    
     return(
         <div className='column is-one-third'>
             <div className="card">
@@ -10,10 +13,8 @@ const Item =({id, nombre, imagen, precio, stock}) => {
                     {nombre}
                 </h2>
             </header>
-            <div className='card-image'>
-                <figure className='image img-prod'>
-                    <img src={imagen} alt='Imagen que no carga, a resolver con BD' className="ItemImg is-centered"/>
-                </figure>
+            <div className='container'>
+                    <img src={imagen} alt='Imagen que no carga, a resolver con BD' className="img-prod "/>
             </div>
             <section className='card-content info'>
                 <p className="">
@@ -25,7 +26,7 @@ const Item =({id, nombre, imagen, precio, stock}) => {
             </section>
             <footer className="card -footer ">
                 <div className="container is-centered details">
-                <div className="Details button is-light" > <Link to={`/item/${id}`}>Ver detalles</Link></div>
+                <div className="Details button gral-button" > <Link to={`/item/${id}`}>Ver detalles</Link></div>
                 </div>
             </footer>
         </div>

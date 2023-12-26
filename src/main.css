@@ -83,3 +83,5 @@ font-family: 'Merriweather', serif;}
 .error{
     color: var(--clr-red)
 }
+
+.gral-button{   background-color: var(--clr-main) !important;}
